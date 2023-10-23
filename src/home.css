@@ -1,0 +1,125 @@
+body {
+  background: rgb(134, 213, 222);
+}
+.container {
+  margin: 20px auto;
+  border-radius: 20px;
+  padding: 0px;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
+
+  color: white;
+  align-content: center;
+}
+.background {
+  background-image: url("Media/sun.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: 50px;
+}
+.searchbr {
+  margin: 20px auto;
+  text-align: center;
+  font-size: 20px;
+  width: 100%;
+  max-width: 700px;
+  background: rgba(17, 59, 69, 0.337);
+  display: flex;
+  border-radius: 60px;
+  padding: 0 20px;
+}
+.searchbr input {
+  background: transparent;
+  flex: 1;
+  border: 0;
+  outline: none;
+  padding: 8px;
+  font-size: 18px;
+}
+.top {
+  display: flex;
+  align-items: center;
+  background: rgba(52, 64, 68, 0.101);
+  justify-content: space-between;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.location,
+.today-date {
+  margin-right: 15px;
+}
+.today-date {
+  text-align: right;
+}
+h1,
+h2 {
+  font-weight: light;
+
+  font-size: 25px;
+}
+
+h1 span,
+.date {
+  font-weight: lighter;
+  font-size: 20px;
+}
+
+.center-info {
+  text-align: center;
+  background: rgba(75, 102, 106, 0.255);
+  border-radius: 15px;
+}
+.sun-icon i {
+  font-size: 250px;
+}
+h3 {
+  font-weight: medium;
+  font-size: 70px;
+  margin: 0px auto;
+}
+h4 {
+  font-size: 30px;
+  font-weight: 400;
+  margin: 0px auto;
+}
+.days-list {
+  align-self: center;
+  display: flex;
+  list-style: none;
+  margin: 20px auto;
+  padding: 0px;
+  margin-right: 0%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0, 0.35);
+  border-radius: 10px;
+  justify-content: space-between;
+  background: transparent;
+}
+.days-list li {
+  padding: 15px;
+  cursor: pointer;
+  display: flex;
+  border-radius: 10px;
+  flex-direction: column;
+
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  background: rgba(9, 106, 163, 0.958);
+}
+.days-list li .bx {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.days-list li:hover {
+  transform: scale(1.1);
+  background: rgb(210, 231, 235);
+  color: rgb(18, 18, 60);
+  box-shadow: 0 5px rgba(0, 0, 0, 0, 0.35);
+}
+.p-h-w {
+  line-height: 0.5;
+}

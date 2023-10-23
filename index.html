@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla Weather</title>
+    <title>Weather</title>
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -20,12 +20,91 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="src/home.css" />
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
-    <h1>Hello World</h1>
+    <div class="container">
+      <form action="" class="searchbr">
+        <input
+          id="city-search-input"
+          type="text"
+          class="text"
+          placeholder="⦿"
+        />
+      </form>
 
-    <script src="src/app.js"></script>
+      <div class="top">
+        <div class="location">
+          <h1>
+            PARIS, <br />
+            <span class="country" id="country"> France</span>
+          </h1>
+        </div>
+
+        <div class="today-date">
+          <h2>
+            <span id="weekday"> FRIDAY </span><br />
+            <span class="date" id="exact-date">29 October 2023</span>
+          </h2>
+        </div>
+      </div>
+      <br />
+
+      <div class="center-info">
+        <div class="sun-icon">
+          <i class="bx bx-sun"></i>
+        </div>
+        <h3>25ºC</h3>
+        <h4>Sunny</h4>
+        <br />
+        <div class="p-h-w">
+          <p>Precipitation: <span class="precipitation">4%</span></p>
+          <p>Humidity: <span class="humidity">34%</span></p>
+          <p>Wind Speed: <span class="windspeed">6km/h</span></p>
+        </div>
+        <img class="background" src="Media/sun.svg" alt="" />
+        <ul class="days-list">
+          <li>
+            <i class="bx bx-cloud"></i>
+            <span>Sat</span>
+            <span class="day-temp">23ºC</span>
+          </li>
+          <li>
+            <i class="bx bx-sun"></i>
+            <span>Sun</span>
+            <span class="day-temp">23ºC</span>
+          </li>
+          <li>
+            <i class="bx bx-cloud-lightning"></i>
+            <span>Mon</span>
+            <span class="day-temp">28ºC</span>
+          </li>
+          <li>
+            <i class="bx bx-cloud-light-rain"></i>
+            <span>Tue</span>
+            <span class="day-temp">02ºC</span>
+          </li>
+          <li>
+            <i class="bx bx-wind"></i>
+            <span>Wed</span>
+            <span class="day-temp">14ºC</span>
+          </li>
+          <li>
+            <i class="bx bx-cloud-snow"></i>
+            <span>Wed</span>
+            <span class="day-temp">14ºC</span>
+          </li>
+        </ul>
+      </div>
+
+      <p>
+        <a href="https://github.com/DanielaCardenasZ/my-weather-project"
+          >Open-source code</a
+        >
+        by Daniela Cárdenas
+      </p>
+    </div>
   </body>
+  <script src="src/app.js"></script>
 </html>
