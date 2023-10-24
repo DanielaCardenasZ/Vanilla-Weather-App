@@ -36,10 +36,8 @@
 
       <div class="top">
         <div class="location">
-          <h1>
-            PARIS, <br />
-            <span class="hour"> 8:30pm</span>
-          </h1>
+          <h1 id="city">PARIS <br /></h1>
+          <span id="hour"> 8:30pm</span>
         </div>
 
         <div class="today-date">
@@ -52,17 +50,17 @@
       <br />
 
       <div class="center-info">
-        <h5></h5>
+        <h5>☁️</h5>
         <h3>
-          <strong>25</strong> <small class="units">ºC|<a href="$">ºF</a></small>
+          <strong id="temperature">25</strong>
+          <small class="units">ºC|<a href="$">ºF</a></small>
         </h3>
-        <h4>Sunny</h4>
+        <h4 id="description">Clear</h4>
         <br />
         <div class="col-md-6">
           <ul>
-            <li>Precipitation: 0%</li>
-            <li>Humidity: 73%</li>
-            <li>Wind: 2kh/h</li>
+            <li>Humidity: <span id="humidity"></span></li>
+            <li>Wind: <span id="windspeed"></span></li>
           </ul>
         </div>
 

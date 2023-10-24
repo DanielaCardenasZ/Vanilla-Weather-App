@@ -41,7 +41,7 @@ currentdate.innerHTML = `${date} ${month} ${year}`;
 let weekday = document.querySelector("#weekday");
 weekday.innerHTML = `${day}`;
 
-let hour = document.querySelector(".hour");
+let hour = document.querySelector("#hour");
 hour.innerHTML = `${hours}:${mins}`;
 
 //Challenge 2
@@ -62,15 +62,22 @@ form.addEventListener("submit", search);
 //Hwrk week 5
 function showTemperature(response) {
   console.log(response.data.main.temp);
-  let degrees = document.querySelector(`h3`);
+  let tempElement = document.querySelector(`#temperature`);
   let cityElement = document.querySelector(`h1`);
+  let city = response.data.name;
+  let humidityElement = document.querySelector(`#humidity`);
+  let windspeedElement = document.querySelector(`#windspeed`);
   let temperature = Math.round(response.data.main.temp);
+  let humidity = Math.round(response.data.main.humidity);
+  let windspeed = Math.round(response.data.wind.speed);
   let condition = response.data.weather[0].main.toLowerCase();
-  let conditionWord = document.querySelector(`h4`);
+  let descriptionElement = document.querySelector(`#description`);
   let body = document.body;
-  degrees.innerHTML = `${temperature}ºC`;
-  cityElement.innerHTML = `${response.data.name}`;
-  conditionWord.innerHTML = `${response.data.weather[0].main}`;
+  tempElement.innerHTML = `${temperature}`;
+  cityElement.innerHTML = `${city}`;
+  descriptionElement.innerHTML = `${response.data.weather[0].description}`;
+  humidityElement.innerHTML = `${humidity}%`;
+  windspeedElement.innerHTML = `${windspeed} Km/H`;
 
   if (condition === "clear") {
     body.classList.add("clear");
