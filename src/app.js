@@ -74,13 +74,18 @@ function showTemperature(response) {
 
   if (condition === "clear") {
     body.classList.add("clear");
+    document.querySelector("h5 ").innerHTML = '<i class="bx bx-sun"></i>';
   } else if (condition === "clouds") {
     body.classList.add("clouds");
+    document.querySelector("h5").innerHTML = '<i class="bx bx-cloud"></i>';
   } else if (condition === "rain" || condition === "drizzle") {
     body.classList.add("rain");
+    document.querySelector("h5").innerHTML = '<i class="bx bx-cloud-rain"></i>';
   } else if (condition === "snow") {
     body.classList.add("snow");
+    document.querySelector("h5").innerHTML = '<i class="bx bx-cloud-snow"></i>';
   } else {
     body.classList.add("other");
+    document.querySelector("h5").innerHTML = '<i class="bx bx-sun"></i>';
   }
 }
