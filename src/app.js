@@ -61,19 +61,18 @@ form.addEventListener("submit", search);
 
 //Hwrk week 5
 function showTemperature(response) {
-  console.log(response.data.main.temp);
   let tempElement = document.querySelector(`#temperature`);
   let cityElement = document.querySelector(`h1`);
   let city = response.data.name;
   let humidityElement = document.querySelector(`#humidity`);
   let windspeedElement = document.querySelector(`#windspeed`);
-  let temperature = Math.round(response.data.main.temp);
   let humidity = Math.round(response.data.main.humidity);
   let windspeed = Math.round(response.data.wind.speed);
   let condition = response.data.weather[0].main.toLowerCase();
   let descriptionElement = document.querySelector(`#description`);
   let body = document.body;
-  tempElement.innerHTML = `${temperature}`;
+  celsiusTemperature = response.data.main.temp;
+  tempElement.innerHTML = Math.round(celsiusTemperature);
   cityElement.innerHTML = `${city}`;
   descriptionElement.innerHTML = `${response.data.weather[0].description}`;
   humidityElement.innerHTML = `${humidity}%`;
@@ -96,3 +95,29 @@ function showTemperature(response) {
     document.querySelector("h5").innerHTML = '<i class="bx bx-sun"></i>';
   }
 }
+
+function showFahrenheitTemp(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#temperature");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemp = (celsiusTemperature * 9) / 5 + 32;
+  tempElement.innerHTML = Math.round(fahrenheitTemp);
+}
+
+function showCelsiusTemp(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#temperature");
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  tempElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+
+fahrenheitLink.addEventListener("click", showFahrenheitTemp);
+
+let celsiusLink = document.querySelector("#celsius-link");
+
+celsiusLink.addEventListener("click", showCelsiusTemp);

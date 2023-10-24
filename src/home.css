@@ -94,6 +94,15 @@ h3 .units {
   right: -22px;
   top: -35px;
 }
+h3 .active {
+  color: white;
+  cursor: default;
+}
+
+h3 .active:hover {
+  text-decoration: none;
+}
+
 h4 {
   font-size: 30px;
   font-weight: 400;
